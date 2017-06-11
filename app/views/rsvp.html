@@ -1,0 +1,59 @@
+		<div class="contain">
+			<div class="flex">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Current Info:</span>
+              <ul>
+				<li id = "nameOne"></li>
+				<li id ="nameTwo"></li>
+				<li id = "attending"></li>
+			  </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+<div class="contain" ng-show= "firstPerson">
+	<div class="flex">
+<p>First name:</p><input ng-model = "firstName" >
+<br>
+<p>Last name:</p><input ng-model = "lastName">
+<br>
+  <br>
+<a ng-click = "test()" class ="waves-effect waves-light btn"> Next</a>
+</div>
+</div>
+
+<div class="contain" ng-show ='plusOne'>
+	<div class="flex">
+<p>First name:</p><input ng-model = "plusFirst" >
+<br>
+<p>Last name:</p><input ng-model = "plusSecond">
+<br>
+<br>
+<a ng-click = "dualNext()" class ="waves-effect waves-light btn">Next</a>
+</div>
+</div>
+
+<div class=" contain" ng-show= "attending">
+	<div class="flex">
+ <form action="#">
+    <p>
+      <input name="group1" type="radio" ng-click = "coming()" id ="test1" />
+      <label for="test1">Attending</label>
+    </p>
+    <p>
+      <input name="group1" type="radio" ng-click = "notComing()" id = "test2"/>
+      <label for="test2" >Unable to attend</label>
+    </p>
+
+  </form>
+  </div>
+  </div>
+
+  <div class="confirm" ng-show = "valid">
+<a ng-click = "submit()" class ="waves-effect waves-light btn"> click me</a>
+  </div>
+

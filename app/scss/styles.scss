@@ -1,0 +1,94 @@
+$red: #5E0925;
+$pink: #FF92B1;
+$gold: #CCA951;
+$blue: #11103B;
+
+
+@import 'header';
+@import 'timelify';
+@import 'ourWedding';
+
+body {
+	background-color: $gold;
+}
+	#weird{
+		bottom:27%;
+
+	}
+		.fa-paw{	
+			font-size: 4vw;
+			position: absolute;
+			right: 47.5vw;
+			background-color: $blue;
+			padding: 8px;
+			border-radius: 50%;
+			z-index: 3;
+		}
+.line {
+	width: 3px; 
+	top: 7%;
+	left: 50%;
+	position: absolute;
+	height: 93%; 
+	margin: 0 auto;
+	background-color: #fff;
+}
+.gold{
+	background-color: $red;
+	color: white;
+	position: relative;
+	h2{
+		text-align: center;
+		text-decoration: underline;
+		font-weight: 100;
+		display: block;
+		margin: 0px 0px 40px 0px;
+	}
+	.contentBlock{
+		width: 50%;
+		position: relative;
+	}
+	.contentRight{
+		width: 50.2%;
+		float: right;
+	}
+
+}
+.imgContainer{
+	background-color: $pink;
+	width: 60%;
+	height: 25%;
+	margin: 0 auto;
+	border: 7px solid transparent;
+	img{
+	width: 100%;
+	}
+	p{
+		color: white;
+		font-family: helvetica;
+		font-size: 1.6vw;
+		padding: 0 20px;
+	}
+	
+}
+.blue2 {
+  background-color: $blue;
+  color: white;
+}
+.slideInLeft, .slideInRight, .wobble{
+animation-duration: 2s;}
+
+section {
+
+	padding: 5vh 5vw;
+}
+#home{
+height: 1vh;
+}
+
+
+#home {
+	display:block;
+	position: absolute;
+	top: 0;
+}
