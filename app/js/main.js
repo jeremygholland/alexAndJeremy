@@ -12,7 +12,7 @@ app.controller('myCtrl', ['$scope', '$firebase', '$firebaseArray', function($sco
 $(function(){
   $(window).scroll(function(){
     var winTop = $(window).scrollTop();
-    if(winTop >= 340){
+    if(winTop >= 540){
       $("body").addClass("sticky-header");
     }else{
       $("body").removeClass("sticky-header");
