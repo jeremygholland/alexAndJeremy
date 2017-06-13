@@ -2,6 +2,9 @@
   box-sizing: border-box; }
 
 .timeline {
+  p, time{
+    font-size: 1.2vw;
+  }
   position: relative;
   overflow: auto;
   width: 100%;

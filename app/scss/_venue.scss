@@ -1,0 +1,42 @@
+.venue {
+	h2{
+	color: $gold;
+	}
+}
+
+.containVenue{
+	margin-top: 8%;
+	display: flex; 
+	flex-wrap: wrap;
+	justify-content: space-between; 
+	.img{
+		width: 50%;
+		img{
+			width: 100%;
+		}
+	}
+	.text{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		.h4{
+			height: 30%;
+			font-size: 3.8vw;
+		}
+		.p{	height: 30%;
+			margin-top: -0%;
+			font-size: 2.2vw;
+		}
+		#p2{
+			height: 30%;
+			margin: 0 0 10% 0;
+			align-self: baseline;
+		}
+		a, a:active, a:focus, a:visited{
+			color: $gold;
+		}
+
+		color: $gold;
+		width: 45%;
+	}
+}

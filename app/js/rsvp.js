@@ -23,10 +23,10 @@ $scope.coming=function(){
 	var attending = true;
 	$scope.valid= true;
 	if(name2.length >0){
-	$('#attending').append('We will be attending')
+	$('#attending').html('We will be attending')
 	}
 	else {
-	$('#attending').append('I will be attending')
+	$('#attending').html('I will be attending')
 
 	}
 	
@@ -37,10 +37,10 @@ $scope.notComing=function(){
 	console.log(attending)
 	$scope.valid= true;
 		if(name2.length >0){
-	$('#attending').append('We can\'t make it')
+	$('#attending').html('We can\'t make it')
 	}
 	else {
-	$('#attending').append('I can\'t make it')
+	$('#attending').html('I can\'t make it')
 
 	}
 }

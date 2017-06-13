@@ -90,6 +90,8 @@ body.sticky-header header {
   overflow: auto;
   width: 100%;
   margin-top: 40px; }
+  .timeline p, .timeline time {
+    font-size: 1.2vw; }
 
 .timeline hr {
   margin: 0 0 20px 0; }
@@ -327,6 +329,43 @@ body.sticky-header header {
     background-color: #5b4d4d;
     border-radius: 25px;
     border: 1px solid #dbb5b7; }
+
+.venue h2 {
+  color: #ffffcd; }
+
+.containVenue {
+  margin-top: 8%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .containVenue .img {
+    width: 50%; }
+    .containVenue .img img {
+      width: 100%; }
+  .containVenue .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #ffffcd;
+    width: 45%; }
+    .containVenue .text .h4 {
+      height: 30%;
+      font-size: 3.8vw; }
+    .containVenue .text .p {
+      height: 30%;
+      margin-top: -0%;
+      font-size: 2.2vw; }
+    .containVenue .text #p2 {
+      height: 30%;
+      margin: 0 0 10% 0;
+      align-self: baseline; }
+    .containVenue .text a, .containVenue .text a:active, .containVenue .text a:focus, .containVenue .text a:visited {
+      color: #ffffcd; }
+
+.contain .flex .card {
+  background-color: #000032; }
+  .contain .flex .card .card-title, .contain .flex .card li {
+    color: #ffffcd; }
 
 body {
   font-family: Ubuntu;
