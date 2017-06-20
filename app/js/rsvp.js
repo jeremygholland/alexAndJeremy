@@ -12,6 +12,7 @@ var testList = [
 
 	$scope.firstName;
 	$scope.lastName;
+	$scope.thanks= false;
 	var objectPush;
 	var name;
 	var name2;
@@ -25,6 +26,7 @@ var testList = [
 $scope.coming=function(){
 	var attending = true;
 	$scope.valid= true;
+	console.log(email);
 	if(name2.length >0){
 	$('#attending').html('We will be attending')
 	}
@@ -52,7 +54,7 @@ $scope.notComing=function(){
 $scope.submitFirst = function(){
 	var counter = null; 
 	var preName = $scope.firstName + ' '+ $scope.lastName;
-	var email = $scope.email; 
+	 email = $scope.email; 
 	 name = preName.toLowerCase();
 
 	for (i =0; i<testList.length; i++){
@@ -69,7 +71,7 @@ $scope.submitFirst = function(){
 
 			}
 
-
+			console.log(email);
 			console.log(name)
 		}
 		else {
@@ -89,9 +91,9 @@ $scope.dualNext = function(){
 	if (($scope.plusSecond.length > 0) && ($scope.plusFirst.length > 0)){
 		var preName2= $scope.plusFirst + ' '+ $scope.plusSecond;
 		name2 = preName2.toLowerCase();
+		var email2 = $scope.email2;
 		$scope.attending = true;
 		$scope.plusOne= false;
-		$('#nameTwo').append(name2)
 	}
 	else {
 		alert('Please fill out the first and last name field with your information')
@@ -102,21 +104,21 @@ $scope.dualNext = function(){
 $scope.submit = function(){
 	  var ref = firebase.database().ref().child("guests");
 
-	console.log('pushed');
-	console.log(name);
-	console.log(name2);
-	console.log(attending);
 	$scope.rsvp = $firebaseArray(ref);
 	$scope.rsvp.$add({
 					personsName: name,
 					plusOne: name2,
 					personResponse: attending,
 					email: email,
-					email2: email2
+					email2: $scope.email2
 				})
-
-	$state.go('home')
+	if (attending == true){
+		$scope.attending = false;
+		$scope.thanks = true;
+	}
 }
+
+
 
 
 }])

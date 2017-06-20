@@ -264,15 +264,21 @@
                             <input name="group1" type="radio" ng-click="notComing()" id="test2" />
                             <label for="test2">Unable to attend</label>
                         </p>
-
+                        <div class="confirm" ng-show="valid">
+                <a ng-click="submit()" class="waves-effect waves-light btn"> Submit</a>
+            </div>
                     </form>
                 </div>
             </div>
 
 
-            <div class="confirm" ng-show="valid">
-                <a ng-click="submit()" class="waves-effect waves-light btn"> Submit</a>
+            <div class=" contain" ng-show="thanks">
+                <div class="flex">
+                  <h3>Thank you for RSVP'ing! We can't wait to celebrate with you! </h3>
             </div>
+                </div>
+
+
                   </div>
 
 
