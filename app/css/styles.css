@@ -362,10 +362,28 @@ body.sticky-header header {
     .containVenue .text a, .containVenue .text a:active, .containVenue .text a:focus, .containVenue .text a:visited {
       color: #ffffcd; }
 
-.contain .flex .card {
-  background-color: #000032; }
-  .contain .flex .card .card-title, .contain .flex .card li {
+.containRsvp {
+  display: flex;
+  flex-wrap: wrap; }
+  .containRsvp .contain {
+    width: 50%;
+    background-color: #000032;
+    padding: 25px;
     color: #ffffcd; }
+    .containRsvp .contain input {
+      color: #ffffcd; }
+    .containRsvp .contain input:active, .containRsvp .contain input:hover, .containRsvp .contain input:focus {
+      border-bottom: 1px solid #ffffcd;
+      box-shadow: 0 1px 0 0 #ffffcd; }
+  .containRsvp .name {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .containRsvp .name .nameContainer {
+      width: 45%; }
+  .containRsvp .btn {
+    background-color: #ffffcd;
+    color: #000032; }
 
 body {
   font-family: Ubuntu;

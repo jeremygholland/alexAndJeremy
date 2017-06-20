@@ -15,9 +15,12 @@ var testList = [
 	var objectPush;
 	var name;
 	var name2;
+	var email;
+	var email2;
 	$scope.attending = false;
 	$scope.firstPerson = true;
 	var attending = false;
+	$scope.firstPost= false;
 
 $scope.coming=function(){
 	var attending = true;
@@ -46,17 +49,18 @@ $scope.notComing=function(){
 }
 
 
-$scope.test = function(){
+$scope.submitFirst = function(){
 	var counter = null; 
 	var preName = $scope.firstName + ' '+ $scope.lastName;
+	var email = $scope.email; 
 	 name = preName.toLowerCase();
 
 	for (i =0; i<testList.length; i++){
 		if((name ==testList[i].name) | (name == testList[i].name2)){
-			$('#nameOne').append(name)
 			if(testList[i].guests == "2"){
 				$scope.plusOne = true;
 				$scope.firstPerson = false;
+				$scope.firstPost=true;
 
 			}
 			else{
@@ -107,6 +111,8 @@ $scope.submit = function(){
 					personsName: name,
 					plusOne: name2,
 					personResponse: attending,
+					email: email,
+					email2: email2
 				})
 
 	$state.go('home')

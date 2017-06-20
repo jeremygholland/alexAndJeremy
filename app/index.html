@@ -201,46 +201,55 @@
     <section class="gold venue" ng-controller="rsvpCtrl">
         <h2>R.S.V.P</h2>
 
-            <div class="contain">
-                <div class="flex">
-                    <div class="card darken-1">
-                        <div class="card-content white-text">
-                            <span class="card-title">Current Info:</span>
-                            <ul>
-                                <li id="nameOne"></li>
-                                <li id="nameTwo"></li>
-                                <li id="attending"></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="containRsvp">
 
 
 
             <div class="contain" ng-show="firstPerson">
                 <div class="flex">
+                    <div class="name">
+                        <div class="nameContainer">
                     <p>First name:</p>
                     <input ng-model="firstName">
-                    <br>
+                    </div>
+                    <div class="nameContainer">
                     <p>Last name:</p>
                     <input ng-model="lastName">
+                </div>
+            </div>
                     <br>
                     <br>
-                    <a ng-click="test()" class="waves-effect waves-light btn"> Next</a>
+                    <p>Email Address</p>
+                    <input ng-model="email">
+                    <a ng-click="submitFirst()" class="waves-effect waves-light btn"> Next</a>
+                </div>
+            </div>
+            <div class="contain" ng-show="firstPost">
+                <div class="flex">
+                    <h5>Name: {{firstName}} {{lastName}}</h5>
+                    <br>
+                    <br>
+                    <h5>Email: {{email}}</h5>
                 </div>
             </div>
 
-            <div class="contain" ng-show='plusOne'>
+            <div class="contain" ng-show="plusOne">
                 <div class="flex">
+                    <div class="name">
+                        <div class="nameContainer">
                     <p>First name:</p>
                     <input ng-model="plusFirst">
-                    <br>
+                    </div>
+                    <div class="nameContainer">
                     <p>Last name:</p>
                     <input ng-model="plusSecond">
+                </div>
+            </div>
                     <br>
                     <br>
-                    <a ng-click="dualNext()" class="waves-effect waves-light btn">Next</a>
+                    <p>Email Address</p>
+                    <input ng-model="email2">
+                    <a ng-click="dualNext()" class="waves-effect waves-light btn"> Next</a>
                 </div>
             </div>
 
@@ -260,9 +269,11 @@
                 </div>
             </div>
 
+
             <div class="confirm" ng-show="valid">
-                <a ng-click="submit()" class="waves-effect waves-light btn"> click me</a>
+                <a ng-click="submit()" class="waves-effect waves-light btn"> Submit</a>
             </div>
+                  </div>
 
 
 

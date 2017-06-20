@@ -1,10 +1,31 @@
-.contain {
-	.flex{
-	.card {
-		background-color: $blue;
-		.card-title, li{
-			color: $gold;
+.containRsvp{
+	display: flex; 
+	flex-wrap: wrap;
+
+	.contain{
+		width: 50%;
+			background-color: $blue;
+	padding: 25px;
+	color: $gold;
+	input{
+		color: $gold;
+	}
+	input:active, input:hover, input:focus{
+		border-bottom: 1px solid $gold;
+		box-shadow:0 1px 0 0 $gold;
+	}
+	}
+	.name{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		.nameContainer{
+			width: 45%;
 		}
 	}
+	.btn{
+		background-color: $gold;
+		color: $blue;
 	}
 }
+
