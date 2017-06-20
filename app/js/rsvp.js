@@ -24,7 +24,7 @@ var testList = [
 	$scope.firstPost= false;
 
 $scope.coming=function(){
-	var attending = true;
+	 attending = true;
 	$scope.valid= true;
 	console.log(email);
 	if(name2.length >0){
@@ -38,7 +38,7 @@ $scope.coming=function(){
 	console.log(attending)
 }
 $scope.notComing=function(){
-	var attending = false;
+	 attending = false;
 	console.log(attending)
 	$scope.valid= true;
 		if(name2.length >0){
@@ -91,7 +91,7 @@ $scope.dualNext = function(){
 	if (($scope.plusSecond.length > 0) && ($scope.plusFirst.length > 0)){
 		var preName2= $scope.plusFirst + ' '+ $scope.plusSecond;
 		name2 = preName2.toLowerCase();
-		var email2 = $scope.email2;
+		 email2 = $scope.email2;
 		$scope.attending = true;
 		$scope.plusOne= false;
 	}

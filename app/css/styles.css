@@ -364,7 +364,8 @@ body.sticky-header header {
 
 .containRsvp {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  min-height: 344px; }
   .containRsvp .contain {
     width: 50%;
     background-color: #000032;
