@@ -120,11 +120,8 @@ $scope.dualNext = function(){
 }
 
 
-$scope.submit = function(){
-	  var ref = firebase.database().ref().child("guests");
-
-	$scope.rsvp = $firebaseArray(ref);
-	$scope.rsvp.$add({
+function pushContent(){
+$scope.rsvp.$add({
 					personsName: name,
 					plusOne: name2,
 					personResponse: attending,
@@ -140,6 +137,35 @@ $scope.submit = function(){
 		$('#responseNo').fadeIn(2000);
 		$('#thanksNo').delay(500).fadeIn(2000);
 	}
+}
+
+$scope.submit = function(){
+	  var ref = firebase.database().ref().child("guests");
+	  var rsvpArr = $firebaseArray(ref);
+	$scope.rsvp = rsvpArr;
+	rsvpArr.$loaded(
+		function(data){
+				console.log(rsvpArr.length);
+
+				if(rsvpArr.length >0){
+	for (b = 0; b< rsvpArr.length; b++){
+			if((name == rsvpArr[b].personsName) | (name == rsvpArr[b].plusOne)){
+			
+			
+
+			alert("bro you already rsvp\'d")
+		}
+		else{
+			pushContent()
+			
+		}
+	}
+}
+else{
+	pushContent();
+}
+		})
+
 }
 
 
