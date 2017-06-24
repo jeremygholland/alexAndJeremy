@@ -10,6 +10,13 @@ var testList = [
 {name: "aaron case", name2: "emma pallen", guests: "2"}
 ]
 	$('#rsvpFirstName').hide();
+	$('#rsvpSecondName').hide();
+	$('#response').hide();
+	$('#responseYes').hide();
+	$('#responseNo').hide();
+	$('#thanksYes').hide();
+	$("#thanksNo").hide();
+
 
 	$scope.firstName;
 	$scope.lastName;
@@ -22,7 +29,7 @@ var testList = [
 	$scope.attending = false;
 	$scope.firstPerson = true;
 	var attending = false;
-	$scope.firstPost= true;
+	$scope.firstPost= false;
 
 $scope.coming=function(){
 	 attending = true;
@@ -104,6 +111,8 @@ $scope.dualNext = function(){
 		 email2 = $scope.email2;
 		$scope.attending = true;
 		$scope.plusOne= false;
+		$('#rsvpSecondName').fadeIn(2000)
+
 	}
 	else {
 		alert('Please fill out the first and last name field with your information')
@@ -122,9 +131,14 @@ $scope.submit = function(){
 					email: email,
 					email2: $scope.email2
 				})
+	$scope.attending= false;
 	if (attending == true){
-		$scope.attending = false;
-		$scope.thanks = true;
+		$('#responseYes').fadeIn(2000);
+		$('#thanksYes').delay(500).fadeIn(2000);
+	}
+	else{
+		$('#responseNo').fadeIn(2000);
+		$('#thanksNo').delay(500).fadeIn(2000);
 	}
 }
 

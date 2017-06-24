@@ -9,11 +9,27 @@ $blue: #000032;
 @import 'ourWedding';
 @import 'venue';
 @import 'rsvp';
+
+@font-face {
+	font-family: textFont;
+	src: url(../../fonts/SinhalaMN.ttf);
+}
+
 body{
-	font-family: Ubuntu;
+	font-family: textFont;
 	font-weight: 100;
 }
 
+[type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:before, [type="radio"].with-gap:checked+label:after{
+	background-color: $gold;
+	border: 2px solid $gold;
+
+}
+
+	#test1:focus + label, #test2:focus + label, #test1:checked + label, #test2:checked + label{
+		color: $gold;
+
+	}
 	#weird{
 		bottom:27%;
 
@@ -42,7 +58,6 @@ body{
 	position: relative;
 	h2{
 		text-align: center;
-		text-decoration: underline;
 		font-weight: 100;
 		display: block;
 		margin: 0px 0px 40px 0px;

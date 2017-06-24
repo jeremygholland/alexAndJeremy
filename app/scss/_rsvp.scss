@@ -37,6 +37,7 @@
 }
 
 #firstPost{
+	position: relative;
 	width: 40%;
 	margin: 0 auto;
 	border-radius: 25px;
@@ -45,9 +46,39 @@
 	justify-content: center;
 	h3{
 		text-align: center;
+		margin-top: 10vh;
 	}
-	img{	
-		width: 120%;
-		margin-left: -5%;
+	#divider{	
+		width: 75%;
+		margin-top: 2vh
+	}
+	#rvspBottom{
+	position: absolute;
+	bottom: 10px;
+	width: 95%;
+}
+	#rsvpTop{
+		position: absolute;
+		top: 10px;
+		width: 95%;
+	}
+	#rsvpLeft{
+		position: absolute;
+		left: 10px;
+		width: 95%;
+	}
+	#rsvpRight{
+		position: absolute;
+		right: 10px;
+		width: 95%;
+	}
+	.cardInfo{
+		font-size: 1.8vw;
+		text-align: center;
+	}
+	.rsvpResponse{
+		margin: 5vw 0 10vw;
 	}
 }
+
+

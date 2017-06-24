@@ -404,6 +404,7 @@ body.sticky-header header {
   animation-delay: 2s; }
 
 #firstPost {
+  position: relative;
   width: 40%;
   margin: 0 auto;
   border-radius: 25px;
@@ -411,14 +412,47 @@ body.sticky-header header {
   flex-wrap: wrap;
   justify-content: center; }
   #firstPost h3 {
+    text-align: center;
+    margin-top: 10vh; }
+  #firstPost #divider {
+    width: 75%;
+    margin-top: 2vh; }
+  #firstPost #rvspBottom {
+    position: absolute;
+    bottom: 10px;
+    width: 95%; }
+  #firstPost #rsvpTop {
+    position: absolute;
+    top: 10px;
+    width: 95%; }
+  #firstPost #rsvpLeft {
+    position: absolute;
+    left: 10px;
+    width: 95%; }
+  #firstPost #rsvpRight {
+    position: absolute;
+    right: 10px;
+    width: 95%; }
+  #firstPost .cardInfo {
+    font-size: 1.8vw;
     text-align: center; }
-  #firstPost img {
-    width: 120%;
-    margin-left: -5%; }
+  #firstPost .rsvpResponse {
+    margin: 5vw 0 10vw; }
+
+@font-face {
+  font-family: textFont;
+  src: url(../../fonts/SinhalaMN.ttf); }
 
 body {
-  font-family: Ubuntu;
+  font-family: textFont;
   font-weight: 100; }
+
+[type="radio"]:checked + label:after, [type="radio"].with-gap:checked + label:before, [type="radio"].with-gap:checked + label:after {
+  background-color: #ffffcd;
+  border: 2px solid #ffffcd; }
+
+#test1:focus + label, #test2:focus + label, #test1:checked + label, #test2:checked + label {
+  color: #ffffcd; }
 
 #weird {
   bottom: 27%; }
@@ -447,7 +481,6 @@ body {
   position: relative; }
   .gold h2 {
     text-align: center;
-    text-decoration: underline;
     font-weight: 100;
     display: block;
     margin: 0px 0px 40px 0px; }
