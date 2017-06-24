@@ -399,6 +399,23 @@ body.sticky-header header {
     background-color: #ffffcd;
     color: #000032; }
 
+#rsvpFirstName {
+  animation-duration: 2s;
+  animation-delay: 2s; }
+
+#firstPost {
+  width: 40%;
+  margin: 0 auto;
+  border-radius: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  #firstPost h3 {
+    text-align: center; }
+  #firstPost img {
+    width: 120%;
+    margin-left: -5%; }
+
 body {
   font-family: Ubuntu;
   font-weight: 100; }

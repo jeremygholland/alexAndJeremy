@@ -30,3 +30,24 @@
 	}
 }
 
+#rsvpFirstName{
+	animation-duration: 2s;
+	animation-delay: 2s;
+
+}
+
+#firstPost{
+	width: 40%;
+	margin: 0 auto;
+	border-radius: 25px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	h3{
+		text-align: center;
+	}
+	img{	
+		width: 120%;
+		margin-left: -5%;
+	}
+}

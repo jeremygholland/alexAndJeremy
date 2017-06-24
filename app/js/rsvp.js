@@ -9,6 +9,7 @@ var testList = [
 {name: "kyle earnhart", guests: '1'},
 {name: "aaron case", name2: "emma pallen", guests: "2"}
 ]
+	$('#rsvpFirstName').hide();
 
 	$scope.firstName;
 	$scope.lastName;
@@ -21,7 +22,7 @@ var testList = [
 	$scope.attending = false;
 	$scope.firstPerson = true;
 	var attending = false;
-	$scope.firstPost= false;
+	$scope.firstPost= true;
 
 $scope.coming=function(){
 	 attending = true;
@@ -63,6 +64,7 @@ $scope.submitFirst = function(){
 				$scope.plusOne = true;
 				$scope.firstPerson = false;
 				$scope.firstPost=true;
+				$('#rsvpFirstName').fadeIn(2000)
 
 			}
 			else{
@@ -85,6 +87,14 @@ $scope.submitFirst = function(){
 	}
 }
 
+
+
+$scope.single = function(){
+			$scope.plusOne = false;
+			$scope.firstPerson = false;
+			$scope.attending = true;
+
+}
 
 
 $scope.dualNext = function(){

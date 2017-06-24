@@ -229,17 +229,20 @@
                     <a ng-click="submitFirst()" class="waves-effect waves-light btn"> Next</a>
                 </div>
             </div>
-            <div class="contain" ng-show="firstPost">
+            <div class="contain" ng-show="firstPost" id ="firstPost">
                 <div class="flex">
-                    <h5>Name: {{firstName}} {{lastName}}</h5>
-                    <br>
-                    <br>
-                    <h5>Email: {{email}}</h5>
+                    <h3>R.S.V.P.</h3>
+                    <p id = "rsvpFirstName"> {{firstName}} {{lastName}}</p>
+                    <img src="images/doubleLines.svg" alt="">
+                    <p ng-show="plusOne">and</p>
+                    <p id="rsvpSecondName" ng-show="plusOne">{{plusFirst}} {{plusSecond}}</p>
+                    <p>Email: {{email}}</p>
                 </div>
             </div>
 
             <div class="contain" ng-show="plusOne">
                 <div class="flex">
+                    <h5>Who else will be coming?</h5>
                     <div class="name">
                         <div class="nameContainer">
                     <p>First name:</p>
@@ -255,19 +258,21 @@
                     <p>Email Address</p>
                     <input ng-model="email2">
                     <a ng-click="dualNext()" class="waves-effect waves-light btn"> Next</a>
+                    <a ng-click="single()" class="waves-effect waves-light btn">Just me!</a>
                 </div>
             </div>
 
             <div class=" contain" ng-show="attending">
                 <div class="flex">
+                    <p>Now the important question: Will you be coming?</p>
                     <form action="#">
                         <p>
                             <input name="group1" type="radio" ng-click="coming()" id="test1" />
-                            <label for="test1">Attending</label>
+                            <label for="test1">I wouldn't miss it!</label>
                         </p>
                         <p>
                             <input name="group1" type="radio" ng-click="notComing()" id="test2" />
-                            <label for="test2">Unable to attend</label>
+                            <label for="test2">I, clearly, would miss it!</label>
                         </p>
                         <div class="confirm" ng-show="valid">
                 <a ng-click="submit()" class="waves-effect waves-light btn"> Submit</a>
