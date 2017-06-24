@@ -4,34 +4,52 @@
 	}
 }
 
+.copy{	
+	color: $gold;
+		text-align: center;
+		.h4{
+			height: 30%;
+			font-size: 3.8vw;
+		}
+		.p{	
+			font-size: 1.8vw;
+		}
+	}
+
 .containVenue{
-	margin-top: 8%;
+	margin-top: 3%;
 	display: flex; 
 	flex-wrap: wrap;
 	justify-content: space-between; 
+
 	.img{
 		width: 50%;
+		height: 50vh;
 		img{
 			width: 100%;
+			height: 100%;
+		}
+		
+	}
+	.iframeContain{
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 100%;
+		height: 50vh;
+		.iframe{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
 		}
 	}
 	.text{
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		.h4{
-			height: 30%;
-			font-size: 3.8vw;
-		}
-		.p{	height: 30%;
-			margin-top: -0%;
-			font-size: 2.2vw;
-		}
-		#p2{
-			height: 30%;
-			margin: 0 0 10% 0;
-			align-self: baseline;
-		}
+		width: 50%;
 		a, a:active, a:focus, a:visited{
 			color: $gold;
 		}

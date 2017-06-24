@@ -333,32 +333,45 @@ body.sticky-header header {
 .venue h2 {
   color: #ffffcd; }
 
+.copy {
+  color: #ffffcd;
+  text-align: center; }
+  .copy .h4 {
+    height: 30%;
+    font-size: 3.8vw; }
+  .copy .p {
+    font-size: 1.8vw; }
+
 .containVenue {
-  margin-top: 8%;
+  margin-top: 3%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; }
   .containVenue .img {
-    width: 50%; }
+    width: 50%;
+    height: 50vh; }
     .containVenue .img img {
-      width: 100%; }
+      width: 100%;
+      height: 100%; }
+  .containVenue .iframeContain {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 50vh; }
+    .containVenue .iframeContain .iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden; }
   .containVenue .text {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 50%;
     color: #ffffcd;
     width: 45%; }
-    .containVenue .text .h4 {
-      height: 30%;
-      font-size: 3.8vw; }
-    .containVenue .text .p {
-      height: 30%;
-      margin-top: -0%;
-      font-size: 2.2vw; }
-    .containVenue .text #p2 {
-      height: 30%;
-      margin: 0 0 10% 0;
-      align-self: baseline; }
     .containVenue .text a, .containVenue .text a:active, .containVenue .text a:focus, .containVenue .text a:visited {
       color: #ffffcd; }
 
