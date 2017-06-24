@@ -225,7 +225,7 @@
                     <br>
                     <br>
                     <p>Email Address</p>
-                    <input ng-model="email">
+                    <input ng-model="email" type="email" id ="email1">
                     <a ng-click="submitFirst()" class="waves-effect waves-light btn"> Next</a>
                 </div>
             </div>
@@ -236,7 +236,7 @@
                 
                 <div class="flex">
                     <h3>R.S.V.P.</h3>
-                    <p class ="cardInfo">&nbsp; <span id = "rsvpFirstName"> {{firstName}}&nbsp;{{lastName}}</span> <span id="rsvpSecondName">&amp; {{plusFirst}}&nbsp;{{plusSecond}}</span>
+                    <p class ="cardInfo">&nbsp; <span id = "rsvpFirstName"> {{firstPersonsName}}</span> <span id="rsvpSecondName">&amp; {{plusOneName}}</span>
                     <img src="images/svgs/cSpacer.svg" alt="" id ="divider">
 
                    <p class="cardInfo">&nbsp;<span id="responseYes">Will be coming!</span> <span id="responseNo">Can't make it.</span></p>
@@ -265,7 +265,7 @@
                     <br>
                     <br>
                     <p>Email Address</p>
-                    <input ng-model="email2">
+                    <input ng-model="email2" type="email">
                     <a ng-click="dualNext()" class="waves-effect waves-light btn"> Next</a>
                     <a ng-click="single()" class="waves-effect waves-light btn">Just me!</a>
                 </div>

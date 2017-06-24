@@ -2,6 +2,8 @@ app.controller('rsvpCtrl', ['$scope', '$state', '$firebase', '$firebaseArray', f
 
 $scope.plusOne = false;
 $scope.valid= false;
+var ref = firebase.database().ref().child("guests");
+var rsvpArr = $firebaseArray(ref);
 
 var testList = [
 {name: "danny holland", name2:"rina holland", guests: '2'},
@@ -17,9 +19,12 @@ var testList = [
 	$('#thanksYes').hide();
 	$("#thanksNo").hide();
 
-
+	var preName;
+	var preName2;
 	$scope.firstName;
 	$scope.lastName;
+	$scope.firstPersonsName;
+	$scope.plusOneName;
 	$scope.thanks= false;
 	var objectPush;
 	var name;
@@ -58,16 +63,42 @@ $scope.notComing=function(){
 	}
 }
 
+function quickCard(){
+$scope.firstPost = true;
+	 		$scope.firstPerson= false;
+	 		$scope.firstPersonsName = preName;
+	 		$scope.plusOneName = rsvpArr[i].plusOne;
+	 		$('#rsvpFirstName').fadeIn(2000);
+	 		$('#rsvpSecondName').fadeIn(2000)
+	 		if(rsvpArr[i].personResponse == true){
+	 			$('#thanksYes').delay(500).fadeIn(2000);
+	 			$('#responseYes').fadeIn(2000);
+	 		}
+	 		else{
+	 			$('#thanksNo').delay(500).fadeIn(2000);
+	 			$('#responseNo').fadeIn(2000)
+	 		}
+}
+
 
 $scope.submitFirst = function(){
 	var counter = null; 
-	var preName = $scope.firstName + ' '+ $scope.lastName;
+	 preName = $scope.firstName + ' '+ $scope.lastName;
+
 	 email = $scope.email; 
 	 name = preName.toLowerCase();
+	 rsvpArr.$loaded(
+	 	function(data){
+	 		for (i =0; i<rsvpArr.length; i++){
+	 	if((name == rsvpArr[i].personsName) | (name == rsvpArr[i].plusOne)){
+	 		alert('It looks like ' + preName +' has already rsvp\'d. We can\'t wait to celebrate with you!');
+	 		quickCard();
 
-	for (i =0; i<testList.length; i++){
-		if((name ==testList[i].name) | (name == testList[i].name2)){
-			if(testList[i].guests == "2"){
+	 	}
+	 	else{
+	 		for (j =0; j<testList.length; j++){
+		if((name ==testList[j].name) | (name == testList[j].name2)){
+			if(testList[j].guests == "2"){
 				$scope.plusOne = true;
 				$scope.firstPerson = false;
 				$scope.firstPost=true;
@@ -92,6 +123,10 @@ $scope.submitFirst = function(){
 			console.log('nah, '+ name +' wasn\'t invited. sorry, breh. ')
 		}
 	}
+	 	}
+}
+	 	})
+	
 }
 
 
@@ -106,7 +141,7 @@ $scope.single = function(){
 
 $scope.dualNext = function(){
 	if (($scope.plusSecond.length > 0) && ($scope.plusFirst.length > 0)){
-		var preName2= $scope.plusFirst + ' '+ $scope.plusSecond;
+		 preName2= $scope.plusFirst + ' '+ $scope.plusSecond;
 		name2 = preName2.toLowerCase();
 		 email2 = $scope.email2;
 		$scope.attending = true;
@@ -140,8 +175,6 @@ $scope.rsvp.$add({
 }
 
 $scope.submit = function(){
-	  var ref = firebase.database().ref().child("guests");
-	  var rsvpArr = $firebaseArray(ref);
 	$scope.rsvp = rsvpArr;
 	rsvpArr.$loaded(
 		function(data){
@@ -153,7 +186,7 @@ $scope.submit = function(){
 			
 			
 
-			alert("bro you already rsvp\'d")
+			alert("It looks like "+ rsvpArr[b].personsName+" already rsvp'd.")
 		}
 		else{
 			pushContent()
@@ -167,7 +200,6 @@ else{
 		})
 
 }
-
 
 
 
