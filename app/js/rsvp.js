@@ -66,8 +66,8 @@ $scope.notComing=function(){
 function quickCard(){
 $scope.firstPost = true;
 	 		$scope.firstPerson= false;
-	 		$scope.firstPersonsName = preName;
-	 		$scope.plusOneName = rsvpArr[i].plusOne;
+	 		$scope.firstPersonsName = preName.toProperCase();
+	 		$scope.plusOneName = rsvpArr[i].plusOne.toProperCase();
 	 		$('#rsvpFirstName').fadeIn(2000);
 	 		$('#rsvpSecondName').fadeIn(2000)
 	 		if(rsvpArr[i].personResponse == true){
@@ -99,6 +99,7 @@ $scope.submitFirst = function(){
 	 		for (j =0; j<testList.length; j++){
 		if((name ==testList[j].name) | (name == testList[j].name2)){
 			if(testList[j].guests == "2"){
+				$scope.firstPersonsName = preName.toProperCase();
 				$scope.plusOne = true;
 				$scope.firstPerson = false;
 				$scope.firstPost=true;
@@ -146,6 +147,7 @@ $scope.dualNext = function(){
 		 email2 = $scope.email2;
 		$scope.attending = true;
 		$scope.plusOne= false;
+		$scope.plusOneName = name2.toProperCase();
 		$('#rsvpSecondName').fadeIn(2000)
 
 	}
@@ -202,5 +204,9 @@ else{
 }
 
 
+
+String.prototype.toProperCase = function () {
+    return this.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+};
 
 }])
