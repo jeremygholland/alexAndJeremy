@@ -380,9 +380,10 @@ body.sticky-header header {
   flex-wrap: wrap;
   min-height: 344px; }
   .containRsvp .contain {
-    width: 50%;
+    width: 40%;
     background-color: #000032;
     padding: 25px;
+    border-radius: 25px;
     color: #ffffcd; }
     .containRsvp .contain input {
       color: #ffffcd; }
