@@ -34,12 +34,40 @@
 .timeline .timeline-items .timeline-item{
 	width: 65%;
 }
+.timeline .timeline-items .timeline-item:nth-of-type(2n+1)::before {
+	border-top: 1em solid #000032;
+border-left: 1em solid transparent;
+}
+
 .timeline .timeline-items .timeline-item::before {
        content: '';
           width: 0;
           height: 0;
           position: absolute;
           left: -1em;
-          top: 0; }
+          top: 0;
+
+          	.timeline{
+		.timeline-item{
+  p, time{
+    font-size: 2.5vw;
+  }
+}
+}
+
+.containRsvp{
+	justify-content: center;
+	.contain{
+		width: 65%;
+	}
+	#firstPost{
+		width: 65%;
+		.cardInfo{
+			font-size: 2.8vw;
+		}
+	}
+}
 
 }
+}
+

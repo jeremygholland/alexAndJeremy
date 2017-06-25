@@ -113,8 +113,12 @@ $scope.submitFirst = function(){
 
 			}
 			else{
+			$scope.firstPersonsName = preName.toProperCase();
+
+				$scope.firstPost = true;
 			$scope.firstPerson = false;
 			$scope.attending = true;
+			$('#rsvpFirstName').fadeIn(2000)
 
 			}
 
@@ -218,6 +222,17 @@ $scope.dualNext = function(){
 
 
 function pushContent(){
+
+
+	 		if(name2 == null)  {
+	 			$scope.rsvp.$add({
+					personsName: name,
+					personResponse: attending,
+					email: email
+				})
+	 		}
+	 		else{
+
 $scope.rsvp.$add({
 					personsName: name,
 					plusOne: name2,
@@ -225,6 +240,7 @@ $scope.rsvp.$add({
 					email: email,
 					email2: $scope.email2
 				})
+}
 	$scope.attending= false;
 	if (attending == true){
 		$('#responseYes').fadeIn(2000);
