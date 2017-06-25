@@ -154,10 +154,11 @@ $scope.dualNext = function(){
 		rsvpArr.$loaded(
 		function(data){
 			for (i =0; i<rsvpArr.length; i++){
-	 	if((name == rsvpArr[i].personsName) | (name == rsvpArr[i].plusOne)){
+	 	if((name2 == rsvpArr[i].personsName) | (name2 == rsvpArr[i].plusOne)){
 	 		alert('It looks like ' + name2 + ' has already rsvp\'d.');
 	 		single();
-	 		name2=null;
+	 		$scope.plusOneName=null;
+	 		break;
 	 	}
 	 	else{
 		$scope.plusOneName = name2.toProperCase();
