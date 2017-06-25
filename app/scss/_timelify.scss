@@ -3,7 +3,7 @@
 
 .timeline {
   p, time{
-    font-size: 1.2vw;
+    font-size: 1.5vw;
   }
   position: relative;
   overflow: auto;
@@ -59,7 +59,7 @@
         width: 0;
         height: 0;
         position: absolute;
-        right: -1em;
+        left: -1em;
         top: 0; }
       .timeline .timeline-items .timeline-item::after {
         content: '';

@@ -1,0 +1,45 @@
+@media (max-width: 768px){
+
+#ourWedding{
+	.containWeddingIcons{
+		div{
+			width: 51%;
+			
+			margin-bottom: 20px;
+			.containCopy {
+				p{
+					font-size: 3vw;
+				}
+			}
+		}
+
+	}
+}
+
+.timeline::before{
+	left: 15%;
+}
+.timeline .timeline-items .timeline-item.inverted, .timeline .timeline-items .timeline-item{
+	left: 20.5%;
+}
+.timeline .timeline-items .timeline-item::after{
+	 content: '';
+          width: 30px;
+          height: 30px;
+          position: absolute;
+          top: -15px;
+          border-radius: 100%;
+          left: calc(-8.78% - 13px);
+}
+.timeline .timeline-items .timeline-item{
+	width: 65%;
+}
+.timeline .timeline-items .timeline-item::before {
+       content: '';
+          width: 0;
+          height: 0;
+          position: absolute;
+          left: -1em;
+          top: 0; }
+
+}
