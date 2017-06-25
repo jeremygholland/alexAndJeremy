@@ -64,8 +64,9 @@ $scope.notComing=function(){
 }
 
 function quickCard(){
-$scope.firstPost = true;
+			$scope.firstPost = true;
 	 		$scope.firstPerson= false;
+	 		$scope.plusOne=false;
 	 		$scope.firstPersonsName = preName.toProperCase();
 	 		$scope.plusOneName = rsvpArr[i].plusOne.toProperCase();
 	 		$('#rsvpFirstName').fadeIn(2000);
@@ -93,6 +94,7 @@ $scope.submitFirst = function(){
 	 	if((name == rsvpArr[i].personsName) | (name == rsvpArr[i].plusOne)){
 	 		alert('It looks like ' + preName +' has already rsvp\'d. We can\'t wait to celebrate with you!');
 	 		quickCard();
+	 		break;
 
 	 	}
 	 	else{
@@ -130,12 +132,14 @@ $scope.submitFirst = function(){
 	
 }
 
-
-
-$scope.single = function(){
-			$scope.plusOne = false;
+function single(){
+	$scope.plusOne = false;
 			$scope.firstPerson = false;
 			$scope.attending = true;
+}
+
+$scope.single = function(){
+			single();
 
 }
 
@@ -147,8 +151,21 @@ $scope.dualNext = function(){
 		 email2 = $scope.email2;
 		$scope.attending = true;
 		$scope.plusOne= false;
+		rsvpArr.$loaded(
+		function(data){
+			for (i =0; i<rsvpArr.length; i++){
+	 	if((name == rsvpArr[i].personsName) | (name == rsvpArr[i].plusOne)){
+	 		alert('It looks like ' + name2 + ' has already rsvp\'d.');
+	 		single();
+	 		name2=null;
+	 	}
+	 	else{
 		$scope.plusOneName = name2.toProperCase();
 		$('#rsvpSecondName').fadeIn(2000)
+	 	}
+	 }
+		})
+		
 
 	}
 	else {
@@ -181,24 +198,8 @@ $scope.submit = function(){
 	rsvpArr.$loaded(
 		function(data){
 				console.log(rsvpArr.length);
-
-				if(rsvpArr.length >0){
-	for (b = 0; b< rsvpArr.length; b++){
-			if((name == rsvpArr[b].personsName) | (name == rsvpArr[b].plusOne)){
-			
-			
-
-			alert("It looks like "+ rsvpArr[b].personsName+" already rsvp'd.")
-		}
-		else{
-			pushContent()
-			
-		}
-	}
-}
-else{
-	pushContent();
-}
+		
+			pushContent();
 		})
 
 }
