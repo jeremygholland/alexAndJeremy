@@ -1,0 +1,40 @@
+@media (max-width: 450px){
+
+header .containTopSvgs {
+	margin-top: 100px;
+	#bride, #groom{
+		width: 45%;
+	}
+	#rainbow{
+		display:none;
+	}
+}
+
+.containRsvp{
+	.contain{
+		width: 60%;
+	}
+	#firstPost{
+		width: 60%;
+		p{
+			font-size: 4.5vw;
+		}
+		#rsvpBottom{
+	position: absolute;
+	bottom: 10px;
+	width: 95%;
+	margin-left: -8%;
+
+}
+	#rsvpTop{
+		position: absolute;
+		top: 40px;
+		width: 95%;
+		margin-left: -8%;}
+	}
+
+}
+
+
+}
+

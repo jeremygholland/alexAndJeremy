@@ -67,6 +67,7 @@ function quickCard(){
 			$scope.firstPost = true;
 	 		$scope.firstPerson= false;
 	 		$scope.plusOne=false;
+	 		$scope.attending=false;
 	 		$scope.firstPersonsName = preName.toProperCase();
 	 		$('#rsvpFirstName').fadeIn(2000);
 	 		if(!!rsvpArr[i].plusOne){

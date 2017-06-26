@@ -47,22 +47,24 @@
 	justify-content: center;
 	h3{
 		text-align: center;
-		margin-top: 10vh;
+		margin-top: 50px;
 	}
 	#divider{	
 		width: 75%;
 		margin-top: 2vh
 	}
-	#rvspBottom{
+	#rsvpBottom{
 	position: absolute;
 	bottom: 10px;
 	width: 95%;
+	margin-left: -5%;
+
 }
 	#rsvpTop{
 		position: absolute;
-		top: 10px;
+		top: 30px;
 		width: 95%;
-	}
+		margin: -5%;}
 	#rsvpLeft{
 		position: absolute;
 		left: 10px;

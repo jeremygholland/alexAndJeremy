@@ -82,6 +82,9 @@ body.sticky-header header {
   .containTopSvgs div {
     width: 20%; }
 
+header h1 {
+  color: #ffffcd; }
+
 * {
   box-sizing: border-box; }
 
@@ -423,18 +426,20 @@ body.sticky-header header {
   justify-content: center; }
   #firstPost h3 {
     text-align: center;
-    margin-top: 10vh; }
+    margin-top: 50px; }
   #firstPost #divider {
     width: 75%;
     margin-top: 2vh; }
-  #firstPost #rvspBottom {
+  #firstPost #rsvpBottom {
     position: absolute;
     bottom: 10px;
-    width: 95%; }
+    width: 95%;
+    margin-left: -5%; }
   #firstPost #rsvpTop {
     position: absolute;
-    top: 10px;
-    width: 95%; }
+    top: 30px;
+    width: 95%;
+    margin: -5%; }
   #firstPost #rsvpLeft {
     position: absolute;
     left: 10px;
