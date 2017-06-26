@@ -116,10 +116,10 @@
   i {
     width: 200%; }
   header .containTopSvgs {
-    margin-top: 100px; }
+    margin-top: 150px;
+    height: 200px; }
     header .containTopSvgs #bride, header .containTopSvgs #groom {
-      width: 49%;
-      height: 200px; }
+      width: 49%; }
     header .containTopSvgs #rainbow {
       display: none; }
   .timeline .timeline-item p, .timeline .timeline-item time {
