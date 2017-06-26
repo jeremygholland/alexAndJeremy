@@ -41,7 +41,7 @@ $scope.coming=function(){
 	 attending = true;
 	$scope.valid= true;
 	console.log(email);
-	if(name2.length >0){
+	if(!!name2){
 	$('#attending').html('We will be attending')
 	}
 	else {
@@ -178,11 +178,11 @@ break;
 }
 
 function single(){
-	$scope.plusOne = false;
+			$scope.plusOne = false;
 			$scope.firstPerson = false;
 			$scope.attending = true;
-			$scope.plusOneName='';
-	 		name2='';
+			$scope.plusOneName=null;
+	 		name2=null;
 
 }
 
@@ -272,12 +272,12 @@ $scope.submit = function(){
 	 		$scope.attending=false;
 	 		$scope.firstPersonsName = preName.toProperCase();
 	 		$('#rsvpFirstName').fadeIn(2000);
-	 		if(!!rsvpArr[i].plusOne){
+	 		if(!!name2){
 	 		$scope.plusOneName = name2;
 	 		$('#rsvpSecondName').fadeIn(2000);
 	 		}
 
-	 		if(rsvpArr[i].personResponse == true){
+	 		if(attending == true){
 	 			$('#thanksYes').delay(500).fadeIn(2000);
 	 			$('#responseYes').fadeIn(2000);
 	 		}
