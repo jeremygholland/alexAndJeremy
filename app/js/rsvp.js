@@ -69,7 +69,7 @@ function quickCard(){
 	 		$scope.firstPerson= false;
 	 		$scope.plusOne=false;
 	 		$scope.attending=false;
-	 		$scope.firstPersonsName = preName.toProperCase();
+	 		$scope.firstPersonsName = rsvpArr[i].personsName.toProperCase();
 	 		$('#rsvpFirstName').fadeIn(2000);
 	 		if(!!rsvpArr[i].plusOne){
 	 		$scope.plusOneName = rsvpArr[i].plusOne.toProperCase();
@@ -274,7 +274,7 @@ $scope.submit = function(){
 	 		$('#rsvpFirstName').fadeIn(2000);
 	 		if(!!rsvpArr[i].plusOne){
 	 		$scope.plusOneName = name2;
-	 		$('#rsvpSecondName').fadeIn(2000)
+	 		$('#rsvpSecondName').fadeIn(2000);
 	 		}
 
 	 		if(rsvpArr[i].personResponse == true){
