@@ -87,8 +87,11 @@ function quickCard(){
 }
 
 function windowCheck(){
-			if(width > 786){
-				$scope.firstPost=true;
+			if(window.matchMedia('(max-width:768px)').matches){
+				
+				}
+				else{
+					$scope.firstPost=true;
 
 				}
 }

@@ -1,8 +1,7 @@
 @media (max-width: 960px) {
   .venue .containVenue {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center; }
+    flex-wrap: wrap; }
     .venue .containVenue .img {
       width: 95%;
       height: auto; }
@@ -16,7 +15,7 @@
   .timeline .timeline-item p, .timeline .timeline-item time {
     font-size: 1.8vw; }
   .containRsvp .contain {
-    width: 45%; }
+    width: 40%; }
     .containRsvp .contain p, .containRsvp .contain input {
       font-size: 2.1vw; }
   #ourWedding .containWeddingIcons div .containCopy p {
@@ -147,8 +146,8 @@
     .containRsvp #firstPost #rsvpTop {
       position: absolute;
       top: 40px;
-      width: 95%;
-      margin-left: -5%; } }
+      width: 100%;
+      left: 0px; } }
 
 @media (max-width: 350px) {
   .containRsvp #firstPost p {

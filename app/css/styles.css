@@ -397,8 +397,7 @@ header h1 {
     border-radius: 25px;
     color: #ffffcd; }
     .containRsvp .contain input, .containRsvp .contain p {
-      color: #ffffcd;
-      font-size: 1.7vw; }
+      color: #ffffcd; }
     .containRsvp .contain input:active, .containRsvp .contain input:hover, .containRsvp .contain input:focus {
       border-bottom: 1px solid #ffffcd;
       box-shadow: 0 1px 0 0 #ffffcd; }
@@ -428,22 +427,22 @@ header h1 {
     text-align: center;
     margin-top: 50px; }
   #firstPost #divider {
-    width: 75%;
+    width: 100%;
     margin-top: 2vh; }
   #firstPost #rsvpBottom {
     position: absolute;
     bottom: 10px;
     width: 95%;
-    margin-left: -5%; }
+    left: 0px; }
   #firstPost #rsvpTop {
     position: absolute;
-    top: 10px;
-    width: 95%;
-    margin-left: -5%; }
+    top: 30px;
+    width: 100%;
+    left: 0px; }
   #firstPost #rsvpLeft {
     position: absolute;
     left: 10px;
-    width: 95%; }
+    width: 100%; }
   #firstPost #rsvpRight {
     position: absolute;
     right: 10px;

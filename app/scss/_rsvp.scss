@@ -11,7 +11,6 @@
 	color: $gold;
 	input, p{
 		color: $gold;
-		font-size: 1.7vw;
 	}
 	input:active, input:hover, input:focus{
 		border-bottom: 1px solid $gold;
@@ -51,25 +50,25 @@
 		margin-top: 50px;
 	}
 	#divider{	
-		width: 75%;
+		width: 100%;
 		margin-top: 2vh
 	}
 	#rsvpBottom{
 	position: absolute;
 	bottom: 10px;
 	width: 95%;
-	margin-left: -5%;
+	left: 0px;
 
 }
 	#rsvpTop{
 		position: absolute;
-		top: 10px;
-		width: 95%;
-		margin-left: -5%;}
+		top: 30px;
+		width: 100%;
+		left: 0px}
 	#rsvpLeft{
 		position: absolute;
 		left: 10px;
-		width: 95%;
+		width: 100%;
 	}
 	#rsvpRight{
 		position: absolute;
