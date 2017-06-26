@@ -9,8 +9,9 @@
 	padding: 25px;
 	border-radius: 25px;
 	color: $gold;
-	input{
+	input, p{
 		color: $gold;
+		font-size: 1.7vw;
 	}
 	input:active, input:hover, input:focus{
 		border-bottom: 1px solid $gold;
@@ -62,9 +63,9 @@
 }
 	#rsvpTop{
 		position: absolute;
-		top: 30px;
+		top: 10px;
 		width: 95%;
-		margin: -5%;}
+		margin-left: -5%;}
 	#rsvpLeft{
 		position: absolute;
 		left: 10px;

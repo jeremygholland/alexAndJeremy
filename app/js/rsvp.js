@@ -4,6 +4,7 @@ $scope.plusOne = false;
 $scope.valid= false;
 var ref = firebase.database().ref().child("guests");
 var rsvpArr = $firebaseArray(ref);
+var width = $(window).width(); 
 
 var testList = [
 {name: "danny holland", name2:"rina holland", guests: '2'},
@@ -85,6 +86,12 @@ function quickCard(){
 	 		}
 }
 
+function windowCheck(){
+			if(width > 786){
+				$scope.firstPost=true;
+
+				}
+}
 
 $scope.submitFirst = function(){
 	var counter = null; 
@@ -109,14 +116,13 @@ $scope.submitFirst = function(){
 				$scope.firstPersonsName = preName.toProperCase();
 				$scope.plusOne = true;
 				$scope.firstPerson = false;
-				$scope.firstPost=true;
+				windowCheck();
 				$('#rsvpFirstName').fadeIn(2000)
 
 			}
 			else{
 			$scope.firstPersonsName = preName.toProperCase();
-
-				$scope.firstPost = true;
+			windowCheck();
 			$scope.firstPerson = false;
 			$scope.attending = true;
 			$('#rsvpFirstName').fadeIn(2000)
@@ -144,8 +150,9 @@ else{
 				$scope.firstPersonsName = preName.toProperCase();
 				$scope.plusOne = true;
 				$scope.firstPerson = false;
-				$scope.firstPost=true;
-				$('#rsvpFirstName').fadeIn(2000);
+		
+				windowCheck();
+			$('#rsvpFirstName').fadeIn(2000);
 
 
 			}
@@ -257,9 +264,28 @@ $scope.submit = function(){
 	$scope.rsvp = rsvpArr;
 	rsvpArr.$loaded(
 		function(data){
-				console.log(rsvpArr.length);
-		
 			pushContent();
+			if (width<=768){
+			$scope.firstPost = true;
+	 		$scope.firstPerson= false;
+	 		$scope.plusOne=false;
+	 		$scope.attending=false;
+	 		$scope.firstPersonsName = preName.toProperCase();
+	 		$('#rsvpFirstName').fadeIn(2000);
+	 		if(!!rsvpArr[i].plusOne){
+	 		$scope.plusOneName = name2;
+	 		$('#rsvpSecondName').fadeIn(2000)
+	 		}
+
+	 		if(rsvpArr[i].personResponse == true){
+	 			$('#thanksYes').delay(500).fadeIn(2000);
+	 			$('#responseYes').fadeIn(2000);
+	 		}
+	 		else{
+	 			$('#thanksNo').delay(500).fadeIn(2000);
+	 			$('#responseNo').fadeIn(2000)
+	 		}
+}
 		})
 
 }

@@ -90,6 +90,8 @@ header h1 {
 
 .containTopNav {
   display: hidden; }
+  .containTopNav a {
+    font-size: 2.5vw; }
 
 * {
   box-sizing: border-box; }
@@ -322,7 +324,7 @@ header h1 {
     border: 8px solid #ffffcd;
     padding: 25px; }
     #ourWedding .containWeddingIcons div p {
-      font-size: 1.8vh;
+      font-size: 1.8vw;
       text-align: center;
       line-height: 24px;
       color: #dbb5b7; }
@@ -394,8 +396,9 @@ header h1 {
     padding: 25px;
     border-radius: 25px;
     color: #ffffcd; }
-    .containRsvp .contain input {
-      color: #ffffcd; }
+    .containRsvp .contain input, .containRsvp .contain p {
+      color: #ffffcd;
+      font-size: 1.7vw; }
     .containRsvp .contain input:active, .containRsvp .contain input:hover, .containRsvp .contain input:focus {
       border-bottom: 1px solid #ffffcd;
       box-shadow: 0 1px 0 0 #ffffcd; }
@@ -434,9 +437,9 @@ header h1 {
     margin-left: -5%; }
   #firstPost #rsvpTop {
     position: absolute;
-    top: 30px;
+    top: 10px;
     width: 95%;
-    margin: -5%; }
+    margin-left: -5%; }
   #firstPost #rsvpLeft {
     position: absolute;
     left: 10px;
