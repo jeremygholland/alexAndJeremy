@@ -1,9 +1,44 @@
 @media (max-width: 450px){
 
+.containHiddenNav{
+	h3{
+		color:$gold;
+	}
+	display: block;
+	.nav-wrapper{
+		position: relative;
+	.brand-logo{
+		position: absolute;
+		top: 10px;
+		color: $gold;
+	}
+	.button-collapse{
+		margin-top: -10px;
+	}
+	#mobile-demo {
+		background-color: $blue;
+		li {
+			margin: 0 20px;
+			border-bottom: 1px solid $red;
+		a{
+		font-size: 4vw;
+		color: $gold;
+		}
+		}
+	}
+	}
+}
+.containTopNav{
+	display:none;
+}
+i{
+	width: 200%;
+}
 header .containTopSvgs {
 	margin-top: 100px;
 	#bride, #groom{
-		width: 45%;
+		width: 49%;
+		height: 200px;
 	}
 	#rainbow{
 		display:none;

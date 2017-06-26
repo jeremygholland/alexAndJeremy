@@ -85,6 +85,12 @@ body.sticky-header header {
 header h1 {
   color: #ffffcd; }
 
+.containHiddenNav {
+  display: none; }
+
+.containTopNav {
+  display: hidden; }
+
 * {
   box-sizing: border-box; }
 
@@ -377,15 +383,6 @@ header h1 {
     width: 45%; }
     .containVenue .text a, .containVenue .text a:active, .containVenue .text a:focus, .containVenue .text a:visited {
       color: #ffffcd; }
-
-@media (max-width: 960px) {
-  .containVenue {
-    display: flex;
-    flex-wrap: wrap; }
-    .containVenue .img {
-      width: 90% !important; }
-      .containVenue .img img {
-        width: 100%; } }
 
 .containRsvp {
   display: flex;

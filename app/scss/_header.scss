@@ -108,3 +108,10 @@ body.sticky-header header {
 header h1 {
   color: $gold;
 }
+
+.containHiddenNav{
+  display: none;
+}
+.containTopNav{
+  display:hidden;
+}

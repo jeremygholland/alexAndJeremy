@@ -1,5 +1,15 @@
 @media (max-width: 768px){
 
+header .containTopSvgs {
+	margin-top: 100px;
+	#bride, #groom{
+		width: 40%;
+	}
+	#rainbow{
+		display:none;
+	}
+}
+
 #ourWedding{
 	.containWeddingIcons{
 		div{
@@ -52,7 +62,7 @@ top: 0;
           	.timeline{
 		.timeline-item{
   p, time{
-    font-size: 3vw;
+    font-size: 3.5vw;
   }
 }
 }

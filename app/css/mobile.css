@@ -4,15 +4,11 @@
     flex-wrap: wrap;
     justify-content: center; }
     .venue .containVenue .img {
-      width: 45%;
+      width: 95%;
       height: auto; }
-      .venue .containVenue .img img {
-        width: 100%; }
     .venue .containVenue .text {
       margin-top: 2vh;
-      width: 90%; }
-      .venue .containVenue .text img {
-        width: 50%; }
+      width: 95%; }
   .venue .copy .h4 {
     font-size: 5vw; }
   .venue .copy .p {
@@ -27,6 +23,12 @@
     font-size: 1.9vw; } }
 
 @media (max-width: 768px) {
+  header .containTopSvgs {
+    margin-top: 100px; }
+    header .containTopSvgs #bride, header .containTopSvgs #groom {
+      width: 40%; }
+    header .containTopSvgs #rainbow {
+      display: none; }
   #ourWedding .containWeddingIcons div {
     width: 55%;
     margin-bottom: 20px; }
@@ -57,7 +59,7 @@
     left: -1em;
     top: 0; }
   .timeline .timeline-item p, .timeline .timeline-item time {
-    font-size: 3vw; }
+    font-size: 3.5vw; }
   .timeline .timeline-items .timeline-item::before {
     content: '';
     width: 0;
@@ -89,10 +91,35 @@
     font-size: 3.5vw; } }
 
 @media (max-width: 450px) {
+  .containHiddenNav {
+    display: block; }
+    .containHiddenNav h3 {
+      color: #ffffcd; }
+    .containHiddenNav .nav-wrapper {
+      position: relative; }
+      .containHiddenNav .nav-wrapper .brand-logo {
+        position: absolute;
+        top: 10px;
+        color: #ffffcd; }
+      .containHiddenNav .nav-wrapper .button-collapse {
+        margin-top: -10px; }
+      .containHiddenNav .nav-wrapper #mobile-demo {
+        background-color: #000032; }
+        .containHiddenNav .nav-wrapper #mobile-demo li {
+          margin: 0 20px;
+          border-bottom: 1px solid #dbb5b7; }
+          .containHiddenNav .nav-wrapper #mobile-demo li a {
+            font-size: 4vw;
+            color: #ffffcd; }
+  .containTopNav {
+    display: none; }
+  i {
+    width: 200%; }
   header .containTopSvgs {
     margin-top: 100px; }
     header .containTopSvgs #bride, header .containTopSvgs #groom {
-      width: 45%; }
+      width: 49%;
+      height: 200px; }
     header .containTopSvgs #rainbow {
       display: none; }
   .containRsvp .contain {
