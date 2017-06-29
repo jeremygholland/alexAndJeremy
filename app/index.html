@@ -20,14 +20,16 @@
     <a id="home">&nbsp;</a>
     <header>
         <div class="containTopSvgs">
-            <div id ="groom">
-                <img src="images/groom.svg" alt="">
+                        <div id="bride"><img src="images/bride.svg" alt="">
             </div>
+
             <div id = "rainbow">
                 <img src="images/rainbow.svg" alt="">
             </div>
-            <div id="bride"><img src="images/bride.svg" alt="">
+            <div id="groom">
+                <img src="images/groom.svg" alt="">
             </div>
+
         </div>
         <h1>We're Getting Married!</h1>
 
@@ -73,7 +75,7 @@
                 <li class="is-hidden timeline-item normal">
                     <img src="images/trudys.jpg" alt="">
                     <p>Some time passed, as Jeremy lacked the courage to ask the pretty young girl out on a date. He didn't lack the tact, of course, to badger Josh about his "cute sister" every time the two's paths crossed. </p>
-                    <p>Eventually, Josh did what Jeremy couldn't and set up a date between Jeremy and Alexadra. </p>
+                    <p>Eventually, Josh did what Jeremy couldn't and set up a date between Jeremy and Alexandra. </p>
                     <hr>
                     <time>May, 15th 2013</time>
                 </li>
@@ -199,7 +201,7 @@
     </section>
     <a id="venue"></a>
     <section class="gold venue">
-        <h2>Venue</h2>
+        <h2 id ="venueTitle">Venue</h2>
             <div class="copy">
                 <div class="h4">
                     The Hummingbird House </div>
@@ -256,7 +258,7 @@
                     <br>
                     <br>
                     <p>Email Address</p>
-                    <input ng-model="email"  id ="email1">
+                    <input ng-model="email"  id ="email1" >
                     <a ng-click="submitFirst()" class="waves-effect waves-light btn"> Next</a>
                 </div>
             </div>
@@ -300,9 +302,9 @@
                     <br>
                     <br>
                     <p>Email Address</p>
-                    <input ng-model="email2">
+                    <input ng-model="email2" type ="email" required>
                     <a ng-click="dualNext()" class="waves-effect waves-light btn"> Next</a>
-                    <a ng-click="single()" class="waves-effect waves-light btn">Just me!</a>
+                    <a ng-click="single()" class="waves-effect waves-light btn" id ="justBtn">Just me!</a>
                 </div>
             </div>
 

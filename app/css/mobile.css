@@ -1,4 +1,10 @@
 @media (max-width: 960px) {
+  section h2 {
+    margin: 3vh 0 6vh; }
+  .containTopNav {
+    display: hidden; }
+    .containTopNav a {
+      font-size: 2.3vw; }
   .venue .containVenue {
     display: flex;
     flex-wrap: wrap; }
@@ -15,13 +21,21 @@
   .timeline .timeline-item p, .timeline .timeline-item time {
     font-size: 1.8vw; }
   .containRsvp .contain {
-    width: 40%; }
+    width: 60%; }
     .containRsvp .contain p, .containRsvp .contain input {
-      font-size: 2.1vw; }
-  #ourWedding .containWeddingIcons div .containCopy p {
-    font-size: 1.9vw; } }
+      font-size: 2.5vw; }
+  .containRsvp .btn {
+    font-size: 2.5vw; }
+  .containRsvp #firstPost {
+    width: 60%; }
+  #ourWedding .containWeddingIcons div {
+    width: 30%; }
+    #ourWedding .containWeddingIcons div .containCopy p {
+      font-size: 2.3vw; } }
 
 @media (max-width: 768px) {
+  section h2 {
+    margin: 4vh 0 8vh; }
   header .containTopSvgs {
     margin-top: 100px; }
     header .containTopSvgs #bride, header .containTopSvgs #groom {
@@ -32,7 +46,7 @@
     width: 55%;
     margin-bottom: 20px; }
     #ourWedding .containWeddingIcons div .containCopy p {
-      font-size: 3.5vw; }
+      font-size: 4.5vw; }
   .timeline::before {
     left: 15%; }
   .timeline .timeline-items .timeline-item.inverted, .timeline .timeline-items .timeline-item {
@@ -74,22 +88,30 @@
         width: 65%; }
         .timeline .timeline-items .timeline-item::before .containRsvp #firstPost .cardInfo {
           font-size: 2.8vw; }
+  .containTopNav a {
+    font-size: 3.5vw;
+    padding: 10px 10px; }
   .containRsvp {
     justify-content: center; }
+    .containRsvp .btn {
+      font-size: 3vw; }
     .containRsvp .contain {
       width: 85%; }
       .containRsvp .contain p, .containRsvp .contain input {
-        font-size: 2.1vw; }
+        font-size: 3vw; }
     .containRsvp #firstPost {
       width: 85%; }
       .containRsvp #firstPost p {
         font-size: 3vw; }
   .venue .copy .h4 {
-    font-size: 6vw; }
+    font-size: 6vw;
+    margin: 2vw 0; }
   .venue .copy .p {
     font-size: 3.5vw; } }
 
 @media (max-width: 450px) {
+  #venueTitle, #containRegistry h2 {
+    margin: 4vh 0; }
   .containHiddenNav {
     display: block; }
     .containHiddenNav h3 {
@@ -125,11 +147,16 @@
     font-size: 4.5vw; }
   .timeline .timeline-items .timeline-item {
     width: 75%; }
+  .venue .copy .h4 {
+    font-size: 10vw;
+    margin-top: 0px; }
+  .venue .copy .p {
+    font-size: 5vw; }
   #ourWedding .containWeddingIcons div {
     width: 85%;
     margin-bottom: 20px; }
     #ourWedding .containWeddingIcons div .containCopy p {
-      font-size: 4.5vw; }
+      font-size: 6vw; }
   .containRsvp .contain {
     width: 85%; }
     .containRsvp .contain p, .containRsvp .contain input {
@@ -141,23 +168,27 @@
     .containRsvp #firstPost #rsvpBottom {
       position: absolute;
       bottom: 10px;
-      width: 95%;
-      margin-left: -5%; }
+      width: 100%;
+      left: 0px; }
     .containRsvp #firstPost #rsvpTop {
       position: absolute;
-      top: 40px;
+      top: 10px;
       width: 100%;
       left: 0px; } }
 
 @media (max-width: 350px) {
-  .containRsvp #firstPost p {
-    font-size: 4.5vw; }
-  .containRsvp #firstPost #rsvpBottom {
+  #ourWedding .containWeddingIcons div .containCopy p {
+    font-size: 7vw; }
+  .containRsvp .btn {
+    font-size: 5vw; }
+  .containRsvp .contain p, .containRsvp .contain input {
+    font-size: 5vw; }
+  .containRsvp .contain #firstPost #rsvpBottom {
     position: absolute;
     bottom: 10px;
     width: 95%;
     margin-left: -10%; }
-  .containRsvp #firstPost #rsvpTop {
+  .containRsvp .contain #firstPost #rsvpTop {
     position: absolute;
     top: 40px;
     width: 95%;

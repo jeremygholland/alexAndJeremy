@@ -1,4 +1,9 @@
 @media (max-width: 768px){
+		section h2 {
+	margin: 4vh 0 8vh;
+}
+
+
 
 header .containTopSvgs {
 	margin-top: 100px;
@@ -18,7 +23,7 @@ header .containTopSvgs {
 			margin-bottom: 20px;
 			.containCopy {
 				p{
-					font-size: 3.5vw;
+					font-size: 4.5vw;
 				}
 			}
 		}
@@ -90,16 +95,24 @@ top: 0;
 }
 
 }
-
+.containTopNav a{
+	font-size: 3.5vw;
+	padding: 10px 10px;
+}
 
 .containRsvp{
+			.btn{
+			font-size: 3vw;
+		}
 	justify-content: center;
 	.contain{
 		width: 85%;
 		p,input{
-			font-size: 2.1vw;
+			font-size: 3vw;
 		}
+
 	}
+
 	#firstPost{
 		width: 85%;
 		p{
@@ -115,6 +128,7 @@ top: 0;
 			.copy{
 			.h4{
 			font-size: 6vw;
+			margin: 2vw 0;
 			}
 			.p{
 				font-size: 3.5vw;

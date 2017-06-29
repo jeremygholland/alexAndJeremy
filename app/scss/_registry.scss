@@ -1,0 +1,14 @@
+#containRegistry {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	h2{
+		color: $gold;
+		width: 100%;
+		text-align: center;
+	}
+	.containLogo{
+		margin: 10vh 0;
+		width: 60%;
+	}
+}

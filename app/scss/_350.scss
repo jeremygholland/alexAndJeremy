@@ -1,13 +1,19 @@
 @media (max-width: 350px){
 
-
+#ourWedding .containWeddingIcons div .containCopy p{
+	font-size: 7vw;
+}
 
 .containRsvp{
-
-	#firstPost{
-		p{
-			font-size: 4.5vw;
+	.btn{
+		font-size: 5vw;
+	}
+	.contain{
+		p,input{
+			font-size: 5vw;
 		}
+	#firstPost{
+
 		#rsvpBottom{
 	position: absolute;
 	bottom: 10px;
@@ -22,5 +28,6 @@
 		margin-left: -10%;}
 	}
 
+}
 }
 }

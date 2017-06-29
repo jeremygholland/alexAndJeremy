@@ -2,6 +2,18 @@
 	display: flex; 
 	flex-wrap: wrap;
 	min-height: 344px;
+	justify-content: center;
+	#justBtn{
+		margin-left: 30%;
+	}
+	.containBtn{
+		display: flex; 
+		flex-wrap: wrap; 
+		justify-content: space-between;
+		a{
+
+		}
+	}
 
 	.contain{
 		width: 40%;
@@ -11,6 +23,7 @@
 	color: $gold;
 	input, p{
 		color: $gold;
+		font-size: 1.8vw;
 	}
 	input:active, input:hover, input:focus{
 		border-bottom: 1px solid $gold;
@@ -31,7 +44,10 @@
 	}
 }
 
-#btmDivider{}
+#btmDivider{
+	display: block;
+	width: 100%;
+}
 
 #rsvpFirstName{
 	animation-duration: 2s;
@@ -58,14 +74,14 @@
 	#rsvpBottom{
 	position: absolute;
 	bottom: 10px;
-	width: 95%;
+	width: 100%;
 	left: 0px;
 
 }
 
 	#rsvpTop{
 		position: absolute;
-		top: 30px;
+		top: 10px;
 		width: 100%;
 		left: 0px}
 	#rsvpLeft{

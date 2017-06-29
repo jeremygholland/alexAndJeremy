@@ -1,4 +1,16 @@
 @media (max-width: 960px){
+	section h2 {
+	margin: 3vh 0 6vh;
+}
+
+	.containTopNav{
+  display:hidden;
+  a{
+    font-size: 2.3vw;
+  }
+}
+
+
 	.venue{
 		.containVenue{
 		display: flex; 
@@ -36,20 +48,26 @@
 
 .containRsvp{
 	.contain{
-		width: 40%;
+		width: 60%;
 		p,input{
-			font-size: 2.1vw;
+			font-size: 2.5vw;
 		}
 	}
+	.btn{
+		font-size: 2.5vw;
+	}
+	#firstPost{width: 60%;}
 }
+
 
 #ourWedding{
 	.containWeddingIcons{
 		div{
+			width: 30%;
 			
 			.containCopy {
 				p{
-					font-size: 1.9vw;
+				font-size: 2.3vw;
 				}
 			}
 		}

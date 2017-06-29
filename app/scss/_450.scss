@@ -1,5 +1,9 @@
 @media (max-width: 450px){
 
+
+#venueTitle, #containRegistry h2{
+	margin: 4vh 0;
+}
 .containHiddenNav{
 	h3{
 		color:$gold;
@@ -56,7 +60,16 @@ header .containTopSvgs {
 	width: 75%;
 }
 
-
+.venue .copy 
+{
+	.h4{
+	font-size: 10vw;
+	margin-top: 0px;
+	}
+	.p{
+		font-size: 5vw;
+	}
+}
 
 #ourWedding{
 	.containWeddingIcons{
@@ -66,7 +79,7 @@ header .containTopSvgs {
 			margin-bottom: 20px;
 			.containCopy {
 				p{
-					font-size: 4.5vw;
+					font-size: 6vw;
 				}
 			}
 		}
@@ -89,13 +102,13 @@ header .containTopSvgs {
 		#rsvpBottom{
 	position: absolute;
 	bottom: 10px;
-	width: 95%;
-	margin-left: -5%;
+	width: 100%;
+	left: 0px;
 
 }
 	#rsvpTop{
 		position: absolute;
-		top: 40px;
+		top: 10px;
 		width: 100%;
 		left: 0px;}
 	}

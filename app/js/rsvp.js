@@ -10,7 +10,8 @@ var testList = [
 {name: "danny holland", name2:"rina holland", guests: '2'},
 {name: "herb holland", name2: "genevieve holland", guests: '2'},
 {name: "kyle earnhart", guests: '1'},
-{name: "aaron case", name2: "emma pallen", guests: "2"}
+{name: "aaron case", name2: "emma pallen", guests: "2"},
+{name: "jeremy holland", name2: "alexandra keppel", guests: "2"}
 ]
 	$('#rsvpFirstName').hide();
 	$('#rsvpSecondName').hide();
@@ -36,6 +37,8 @@ var testList = [
 	$scope.firstPerson = true;
 	var attending = false;
 	$('#firstPost').hide();;
+
+
 
 $scope.coming=function(){
 	 attending = true;
@@ -92,7 +95,7 @@ function quickCard(){
 }
 
 function windowCheck(){
-			if(window.matchMedia('(max-width:768px)').matches){
+			if(window.matchMedia('(max-width:960px)').matches){
 				
 				}
 				else{
@@ -105,7 +108,7 @@ $scope.submitFirst = function(){
 	var counter = null; 
 	 preName = $scope.firstName + ' '+ $scope.lastName;
 
-	 email = $scope.email; 
+	 var email = $scope.email; 
 	 name = preName.toLowerCase();
 	 rsvpArr.$loaded(
 	 	function(data){
@@ -123,6 +126,9 @@ $scope.submitFirst = function(){
 	 	else{
 	 		for (j =0; j<testList.length; j++){
 		if((name ==testList[j].name) | (name == testList[j].name2)){
+
+			if ((email.includes('@'))&& (email.includes('.'))){
+				console.log(email)
 			if(testList[j].guests == "2"){
 				$scope.firstPersonsName = preName.toProperCase();
 				$scope.plusOne = true;
@@ -142,6 +148,15 @@ $scope.submitFirst = function(){
 
 		break;
 		}
+		else {
+			Materialize.toast('Please use a valid email address. We swear, you\'ll only be emailed once or twice!', 3000);
+			$scope.email = '';
+			$scope.lastName ='';
+			$scope.firstName = '';
+		}
+		}
+
+
 		else {
 		counter = counter+1; 
 		}
@@ -180,7 +195,9 @@ break;
 		if (counter == testList.length){
 			$scope.firstName = '';
 			$scope.lastName = '';
-			console.log('nah, '+ name +' wasn\'t invited. sorry, breh. ');
+			$scope.email ='';
+			Materialize.toast('We\'re sorry, '+ name +' doesn\'t match a name that we invited. Please use the name and spelling that was sent on your invitation.', 3000);
+
 		}
 	}
 	 	}
@@ -235,7 +252,10 @@ $scope.dualNext = function(){
 
 	}
 	else {
-		Materialize.toast('Please fill out the first and last name field with your information', 2000)
+		Materialize.toast('Please fill out the first and last name field with your information', 2000);
+		$scope.plusFirst ='';
+		$scope.plusSecond= '';
+		$scope.email2='';
 	}
 }
 

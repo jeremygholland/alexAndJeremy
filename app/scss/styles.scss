@@ -8,6 +8,7 @@ $blue: #000032;
 @import 'timelify';
 @import 'ourWedding';
 @import 'venue';
+@import 'registry';
 @import 'rsvp';
 
 @font-face {
@@ -18,6 +19,11 @@ $blue: #000032;
 body{
 	font-family: textFont;
 	font-weight: 100;
+}
+
+section h2 {
+	margin: 2vh 0 4vh;
+	color: $gold;
 }
 
 [type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:before, [type="radio"].with-gap:checked+label:after{
@@ -60,7 +66,6 @@ body{
 		text-align: center;
 		font-weight: 100;
 		display: block;
-		margin: 0px 0px 40px 0px;
 	}
 	.contentBlock{
 		width: 50%;
