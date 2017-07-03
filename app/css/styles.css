@@ -164,7 +164,7 @@ header h1 {
   width: 0;
   height: 0;
   position: absolute;
-  left: -1em;
+  right: -1em;
   top: 0; }
 
 .timeline .timeline-items .timeline-item::after {
@@ -307,6 +307,29 @@ header h1 {
 .timeline img {
   width: 100%; }
 
+.time {
+  position: relative;
+  padding-left: 30px;
+  width: 100%; }
+
+/*replace the content value with the
+corresponding value from the list below*/
+.time:before {
+  content: "\f073";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  /*--adjust as necessary--*/
+  font-size: 18px;
+  padding-right: 200px;
+  position: absolute;
+  top: 0px;
+  left: 0px; }
+
+.time:before:nth-child(odd) {
+  color: #ffffcd; }
+
 /*# sourceMappingURL=timelify.css.map */
 #ourWedding h2 {
   width: 100%;
@@ -397,17 +420,38 @@ header h1 {
     margin: 10vh 0;
     width: 60%; }
 
+#containEnvelope {
+  margin-top: 20%;
+  cursor: pointer; }
+  #containEnvelope p {
+    text-align: center;
+    color: #ffffcd;
+    text-shadow: 1px 1px 1px #5b4d4d;
+    font-size: 2.5vw; }
+
 .containRsvp {
   display: flex;
   flex-wrap: wrap;
   min-height: 344px;
   justify-content: center; }
+  .containRsvp #rsvpStart {
+    border-radius: 25px;
+    display: block;
+    background-color: #ffffcd;
+    color: #000032;
+    padding: 25px;
+    font-size: 5vw; }
   .containRsvp #justBtn {
     margin-left: 30%; }
-  .containRsvp .containBtn {
+  .containRsvp .containBtns {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; }
+    .containRsvp .containBtns a {
+      width: 30%; }
+    .containRsvp .containBtns #justBtn {
+      margin: 0px;
+      width: 40%; }
   .containRsvp .contain {
     width: 40%;
     background-color: #000032;
@@ -475,6 +519,74 @@ header h1 {
     text-align: center; }
   #firstPost .rsvpResponse {
     margin: 5vw 0 10vw; }
+
+body {
+  background-color: #40DBE5; }
+  body p {
+    font-size: 2.3vw; }
+
+.envelope {
+  position: relative;
+  margin: 10% auto 0;
+  width: 120px;
+  height: 96px;
+  background: #695959;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 0 1px #blue inset; }
+  .envelope:before, .envelope:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    border-width: 48px 60px; }
+  .envelope:before {
+    border-bottom-color: #695959;
+    top: -100%;
+    left: 0px; }
+  .envelope:after {
+    border-right-color: #695959;
+    border-left-color: #796767;
+    border-bottom-color: #796767;
+    top: 0;
+    border-radius: 0 0 5px 5px;
+    transform: rotate(360deg);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25); }
+  .envelope:hover > .paper {
+    top: -30px; }
+
+.paper {
+  position: absolute;
+  width: 95px;
+  height: 85px;
+  margin: 0 auto;
+  background: #fff;
+  top: 0px;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  left: 13px;
+  transition: top 0.5s ease; }
+  .paper:before, .paper:after {
+    content: '';
+    position: absolute;
+    left: 12px;
+    background: #e3f1fc;
+    height: 4px;
+    border-radius: 5px; }
+  .paper:before {
+    top: 14px;
+    width: 31px; }
+  .paper:after {
+    right: 12px;
+    top: 28px;
+    box-shadow: 0 8px 0 #e3f1fc, 0 16px 0 #e3f1fc, 0 24px 0 #e3f1fc, 0 40px 0 #e3f1fc; }
+
+font-face {
+  font-family: 'FontAwesome';
+  src: url("../font/fontawesome-webfont.eot?v=3.0.1");
+  src: url("../font/fontawesome-webfont.eot?#iefix&v=3.0.1") format("embedded-opentype"), url("../font/fontawesome-webfont.woff?v=3.0.1") format("woff"), url("../font/fontawesome-webfont.ttf?v=3.0.1") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
 
 @font-face {
   font-family: textFont;

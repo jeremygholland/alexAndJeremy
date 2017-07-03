@@ -59,7 +59,7 @@
         width: 0;
         height: 0;
         position: absolute;
-        left: -1em;
+        right: -1em;
         top: 0; }
       .timeline .timeline-items .timeline-item::after {
         content: '';
@@ -171,5 +171,32 @@
             .timeline img{
               width: 100%;
             }
+
+            .time {
+    position: relative;
+    padding-left:30px;
+    width: 100%;
+}
+ 
+/*replace the content value with the
+corresponding value from the list below*/
+ 
+.time:before {
+    content: "\f073";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    font-size: 18px;
+    padding-right: 200px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+ 
+.time:before:nth-child(odd){
+  color: $gold;
+}
 
 /*# sourceMappingURL=timelify.css.map */

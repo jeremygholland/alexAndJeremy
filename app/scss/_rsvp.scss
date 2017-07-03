@@ -1,17 +1,41 @@
+#containEnvelope{
+	margin-top: 20%;
+		cursor: pointer;
+		p{
+			text-align: center;
+		color: $gold;
+		text-shadow: 1px 1px 1px $silver;
+		font-size: 2.5vw;
+	}
+}
+
 .containRsvp{
 	display: flex; 
 	flex-wrap: wrap;
 	min-height: 344px;
 	justify-content: center;
+
+	#rsvpStart{
+		border-radius: 25px;
+		display: block;
+		background-color: $gold; 
+		color: $blue;
+		padding: 25px;
+		font-size: 5vw;
+	}
 	#justBtn{
 		margin-left: 30%;
 	}
-	.containBtn{
+	.containBtns{
 		display: flex; 
 		flex-wrap: wrap; 
 		justify-content: space-between;
 		a{
-
+		width: 30%;
+		}
+		#justBtn{
+			margin: 0px;
+			width: 40%;
 		}
 	}
 

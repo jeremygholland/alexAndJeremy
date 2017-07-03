@@ -66,7 +66,7 @@ top: 0;
 
           	.timeline{
 		.timeline-item{
-  p, time{
+  p, .time{
     font-size: 3.5vw;
   }
 }
@@ -135,6 +135,20 @@ top: 0;
 			}
 		}
 	}
+
+	.time:before {
+    
+    top: 6px;
+    left: 0px;
+}
+
+#containEnvelope{
+		p{
+
+		font-size: 4.5vw;
+	}
+}
+
 
 }
 

@@ -1,6 +1,8 @@
 @media (max-width: 960px) {
   section h2 {
     margin: 3vh 0 6vh; }
+  #containEnvelope p {
+    font-size: 4vw; }
   .containTopNav {
     display: hidden; }
     .containTopNav a {
@@ -18,8 +20,8 @@
     font-size: 5vw; }
   .venue .copy .p {
     font-size: 2.5vw; }
-  .timeline .timeline-item p, .timeline .timeline-item time {
-    font-size: 1.8vw; }
+  .timeline .timeline-item p, .timeline .timeline-item .time {
+    font-size: 2.3vw; }
   .containRsvp .contain {
     width: 60%; }
     .containRsvp .contain p, .containRsvp .contain input {
@@ -71,7 +73,7 @@
     position: absolute;
     left: -1em;
     top: 0; }
-  .timeline .timeline-item p, .timeline .timeline-item time {
+  .timeline .timeline-item p, .timeline .timeline-item .time {
     font-size: 3.5vw; }
   .timeline .timeline-items .timeline-item::before {
     content: '';
@@ -107,7 +109,12 @@
     font-size: 6vw;
     margin: 2vw 0; }
   .venue .copy .p {
-    font-size: 3.5vw; } }
+    font-size: 3.5vw; }
+  .time:before {
+    top: 6px;
+    left: 0px; }
+  #containEnvelope p {
+    font-size: 4.5vw; } }
 
 @media (max-width: 450px) {
   #venueTitle, #containRegistry h2 {
@@ -125,7 +132,8 @@
       .containHiddenNav .nav-wrapper .button-collapse {
         margin-top: -10px; }
       .containHiddenNav .nav-wrapper #mobile-demo {
-        background-color: #000032; }
+        background-color: #000032;
+        color: #ffffcd; }
         .containHiddenNav .nav-wrapper #mobile-demo li {
           margin: 0 20px;
           border-bottom: 1px solid #dbb5b7; }
@@ -174,7 +182,22 @@
       position: absolute;
       top: 10px;
       width: 100%;
-      left: 0px; } }
+      left: 0px; }
+  .timeline .timeline-item .time {
+    font-size: 4.5vw; }
+  .time:before {
+    top: 0px;
+    left: 0px; }
+  .containRsvp a {
+    width: 100%;
+    margin: 5px 0; }
+  .containRsvp .containBtns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .containRsvp .containBtns a, .containRsvp .containBtns #justBtn {
+      width: 100%;
+      margin: 5px 0; } }
 
 @media (max-width: 350px) {
   #ourWedding .containWeddingIcons div .containCopy p {

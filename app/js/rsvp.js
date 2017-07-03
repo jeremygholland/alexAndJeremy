@@ -34,11 +34,18 @@ var testList = [
 	var email;
 	var email2;
 	$scope.attending = false;
-	$scope.firstPerson = true;
+	$scope.firstPerson = false;
 	var attending = false;
 	$('#firstPost').hide();;
+	$scope.rsvpStart=true;
+	$scope.rsvpSecondHalf=false;
 
 
+$scope.rsvpStart = function(){
+		$scope.rsvpSecondHalf=true;
+	$scope.firstPerson = true;
+	$scope.rsvpStart = false;
+}
 
 $scope.coming=function(){
 	 attending = true;

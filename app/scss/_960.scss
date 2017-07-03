@@ -2,6 +2,12 @@
 	section h2 {
 	margin: 3vh 0 6vh;
 }
+#containEnvelope{
+		p{
+			font-size: 4vw;
+
+	}
+}
 
 	.containTopNav{
   display:hidden;
@@ -38,8 +44,8 @@
 
 	.timeline{
 		.timeline-item{
-  p, time{
-    font-size: 1.8vw;
+  p, .time{
+    font-size: 2.3vw;
   }
 }
 
@@ -75,4 +81,8 @@
 	}
 }
 
+
+
+
 }
+

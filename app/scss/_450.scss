@@ -21,12 +21,15 @@
 	}
 	#mobile-demo {
 		background-color: $blue;
+		color: $gold;
 		li {
 			margin: 0 20px;
 			border-bottom: 1px solid $red;
 		a{
 		font-size: 4vw;
 		color: $gold;
+		}
+		i{
 		}
 		}
 	}
@@ -114,9 +117,28 @@ header .containTopSvgs {
 	}
 
 }
+ .timeline .timeline-item .time{
+	font-size: 4.5vw;
+}
 
+	.time:before {
+    
+    top: 0px;
+    left: 0px;
+}
+.containRsvp a{
+	width: 100%;
+	margin: 5px 0;
+}
 
-
-
+.containRsvp .containBtns{
+		display: flex; 
+		flex-wrap: wrap; 
+		justify-content: space-between;
+		a, #justBtn{
+		width: 100% ;
+		margin: 5px 0;
+		}
+	}
 }
 
