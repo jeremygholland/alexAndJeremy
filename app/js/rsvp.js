@@ -7,11 +7,45 @@ var rsvpArr = $firebaseArray(ref);
 var width = $(window).width(); 
 
 var testList = [
-{name: "danny holland", name2:"rina holland", guests: '2'},
-{name: "herb holland", name2: "genevieve holland", guests: '2'},
-{name: "kyle earnhart", guests: '1'},
+{name: "danny holland", name2: "rina holland", guests: "2"},
+{name: "herb holland", name2: "genevieve holland", guests: "2"},
 {name: "aaron case", name2: "emma pallen", guests: "2"},
-{name: "jeremy holland", name2: "alexandra keppel", guests: "2"}
+{name: "jeremy holland", name2: "alexandra keppel", guests: "2"},
+{name: "kyle earnhart", guests: '2'},
+{name: "john warren", name2: "alissa swem", guests: "2"},
+{name: "ben holland", guests: "2"},
+{name: "rita holland", guests: "1"},
+{name: "julia holland", guests: "1"},
+{name: "emily holland", guests: "2"},
+{name: "ari akmal", guests: "2"},
+{name: "dan case", name2: "aysha doman", guests: "2"},
+{name: "janie holland", guests: "2"},
+{name: "sarah steadman", guests: "1"},
+{name: "rachel steadman", guests: "1"},
+{name: "cora monastra", guests: "2"},
+{name: "ashley monastra", guests: "2"},
+{name: "eli bensky", name2: "hazel bensky", guests: "2"},
+{name: "joshua keppel", guests: "2"},
+{name: "maria keppel", name2: "kirk keppel", guests: "2"},
+{name: "brad keppel", name2: "vicki keppel", guests: "2"},
+{name: "jeff keppel", name2: "sandy keppel", guests: "2"},
+{name: "david keppel", guests: "2"},
+{name: "john keppel",  guests: "2"},
+{name: "charles grand", name2: "courtney fussell", guests: "2"},
+{name: "jaron castilleja", guests: "2"},
+{name: "brian russel", name2: "jordan russel", guests: "2"},
+{name: "tina reckart", guests: "2"},
+{name: "rae james", name2: "david james", guests: "2"},
+{name: "amanda whiddon", guests: "1"},
+{name: "ross cramblit", name2: "sara clements", guests: "2"},
+{name: "mike levitin", guests: "2"},
+{name: "scott flom", name2: "leti flom", guests: "2"},
+{name: "ryan simpson", name2: "julie ann arbiter", guests: "2"},
+{name: "kinnon faulk", name2: "allison baring", guests: "2"},
+{name: "yoni cohen", guests: "2"},
+{name: "kerin berger", guests: "2"},
+{name: "rae james", name2: "david james", guests: "2"},
+{name: "steven ivy", guests: "1"},
 ]
 	$('#rsvpFirstName').hide();
 	$('#rsvpSecondName').hide();
@@ -20,7 +54,7 @@ var testList = [
 	$('#responseNo').hide();
 	$('#thanksYes').hide();
 	$("#thanksNo").hide();
-
+	$scope.solo;
 	var preName;
 	var preName2;
 	$scope.firstName;
@@ -61,18 +95,7 @@ $scope.coming=function(){
 	
 	console.log(attending)
 }
-$scope.notComing=function(){
-	 attending = false;
-	console.log(attending)
-	$scope.valid= true;
-		if(name2.length >0){
-	$('#attending').html('We can\'t make it')
-	}
-	else {
-	$('#attending').html('I can\'t make it')
 
-	}
-}
 
 
 function quickFades(){
@@ -115,7 +138,7 @@ $scope.submitFirst = function(){
 	var counter = null; 
 	 preName = $scope.firstName + ' '+ $scope.lastName;
 
-	 var email = $scope.email; 
+	 email = $scope.email; 
 	 name = preName.toLowerCase();
 	 rsvpArr.$loaded(
 	 	function(data){
@@ -139,12 +162,14 @@ $scope.submitFirst = function(){
 			if(testList[j].guests == "2"){
 				$scope.firstPersonsName = preName.toProperCase();
 				$scope.plusOne = true;
+				$scope.solo ="We";
 				$scope.firstPerson = false;
 				windowCheck();
 				$('#rsvpFirstName').fadeIn(2000)
 
 			}
 			else{
+				$scope.solo = "I";
 			$scope.firstPersonsName = preName.toProperCase();
 			windowCheck();
 			$scope.firstPerson = false;
@@ -170,7 +195,7 @@ $scope.submitFirst = function(){
 		if (counter == testList.length){
 			$scope.firstName = '';
 			$scope.lastName = '';
-			console.log('nah, '+ name +' wasn\'t invited. sorry, breh. ')
+			Materialize.toast('nah, '+ name +' wasn\'t invited. sorry, breh. ')
 		}
 	}
 	 	}
@@ -183,7 +208,7 @@ else{
 				$scope.firstPersonsName = preName.toProperCase();
 				$scope.plusOne = true;
 				$scope.firstPerson = false;
-		
+				$scope.solo ="We"
 				windowCheck();
 			$('#rsvpFirstName').fadeIn(2000);
 
@@ -223,6 +248,7 @@ function single(){
 
 $scope.single = function(){
 			single();
+			$scope.solo = "I";
 
 }
 
@@ -284,7 +310,7 @@ $scope.rsvp.$add({
 					plusOne: name2,
 					personResponse: attending,
 					email: email,
-					email2: $scope.email2
+					email2: email2
 				})
 }
 	$scope.attending= false;

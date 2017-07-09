@@ -24,7 +24,7 @@
     font-size: 2.3vw; }
   .containRsvp .contain {
     width: 60%; }
-    .containRsvp .contain p, .containRsvp .contain input {
+    .containRsvp .contain p, .containRsvp .contain input, .containRsvp .contain label {
       font-size: 2.5vw; }
   .containRsvp .btn {
     font-size: 2.5vw; }
@@ -99,7 +99,7 @@
       font-size: 3vw; }
     .containRsvp .contain {
       width: 85%; }
-      .containRsvp .contain p, .containRsvp .contain input {
+      .containRsvp .contain p, .containRsvp .contain input, .containRsvp .contain label {
         font-size: 3vw; }
     .containRsvp #firstPost {
       width: 85%; }
@@ -167,7 +167,7 @@
       font-size: 6vw; }
   .containRsvp .contain {
     width: 85%; }
-    .containRsvp .contain p, .containRsvp .contain input {
+    .containRsvp .contain p, .containRsvp .contain input, .containRsvp .contain label {
       font-size: 4.5vw; }
   .containRsvp #firstPost {
     width: 85%; }
@@ -204,7 +204,7 @@
     font-size: 7vw; }
   .containRsvp .btn {
     font-size: 5vw; }
-  .containRsvp .contain p, .containRsvp .contain input {
+  .containRsvp .contain p, .containRsvp .contain input, .containRsvp .contain label {
     font-size: 5vw; }
   .containRsvp .contain #firstPost #rsvpBottom {
     position: absolute;

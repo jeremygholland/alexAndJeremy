@@ -1,5 +1,5 @@
 #containEnvelope{
-	margin-top: 20%;
+	margin: 20% 0 10% 0;
 		cursor: pointer;
 		p{
 			text-align: center;
@@ -45,7 +45,7 @@
 	padding: 25px;
 	border-radius: 25px;
 	color: $gold;
-	input, p{
+	input, p, label{
 		color: $gold;
 		font-size: 1.8vw;
 	}
