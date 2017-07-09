@@ -1,5 +1,5 @@
 #containEnvelope{
-	margin: 20% 0 10% 0;
+	margin: 10% 0;
 		cursor: pointer;
 		p{
 			text-align: center;
@@ -7,6 +7,15 @@
 		text-shadow: 1px 1px 1px $silver;
 		font-size: 2.5vw;
 	}
+}
+
+.toast{
+	width: 20vw;
+	height: auto;
+	background-color: $silver;
+	color: $red;
+	text-shadow: 2px 2px 2px $blue;
+	font-size: 1.8vw;
 }
 
 .containRsvp{

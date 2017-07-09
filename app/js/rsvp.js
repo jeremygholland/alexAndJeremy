@@ -157,7 +157,7 @@ $scope.submitFirst = function(){
 	 		for (j =0; j<testList.length; j++){
 		if((name ==testList[j].name) | (name == testList[j].name2)){
 
-			if ((email.includes('@'))&& (email.includes('.'))){
+			if ((email.includes('@')) | (email.includes('.'))){
 				console.log(email)
 			if(testList[j].guests == "2"){
 				$scope.firstPersonsName = preName.toProperCase();
@@ -181,6 +181,8 @@ $scope.submitFirst = function(){
 		break;
 		}
 		else {
+
+
 			Materialize.toast('Please use a valid email address. We swear, you\'ll only be emailed once or twice!', 3000);
 			$scope.email = '';
 			$scope.lastName ='';
@@ -195,7 +197,7 @@ $scope.submitFirst = function(){
 		if (counter == testList.length){
 			$scope.firstName = '';
 			$scope.lastName = '';
-			Materialize.toast('nah, '+ name +' wasn\'t invited. sorry, breh. ')
+			Materialize.toast('I\'m sorry, we couldn\'t find '+ name +' on our invitation list. Please use the spelling found on your invitation.')
 		}
 	}
 	 	}
