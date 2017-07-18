@@ -26,6 +26,18 @@ font-face {
 	font-family: textFont;
 	src: url(../../fonts/SinhalaMN.ttf);
 }
+.containTopSvgs{
+	label{
+		color: $gold;
+		font-size: 3vw;
+
+	}
+	#bride,#groom,#rainbow{
+		width: 25%;
+		margin-top: -5%;
+	}
+
+}
 
 body{
 	font-family: textFont;

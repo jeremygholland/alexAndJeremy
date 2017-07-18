@@ -601,6 +601,14 @@ font-face {
   font-family: textFont;
   src: url(../../fonts/SinhalaMN.ttf); }
 
+.containTopSvgs label {
+  color: #ffffcd;
+  font-size: 3vw; }
+
+.containTopSvgs #bride, .containTopSvgs #groom, .containTopSvgs #rainbow {
+  width: 25%;
+  margin-top: -5%; }
+
 body {
   font-family: textFont;
   font-weight: 100; }
